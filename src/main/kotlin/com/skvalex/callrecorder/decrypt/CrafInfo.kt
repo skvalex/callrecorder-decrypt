@@ -35,6 +35,7 @@ data class CrafInfo(
     companion object {
         private const val TAG_ID_V1 = 1609
         private const val TAG_ID_V2 = 1610
+        private const val TAG_ID_V3 = 1611
         private const val LENGTH = 15
 
         @JvmStatic
@@ -43,7 +44,7 @@ data class CrafInfo(
                 file.seek(crafFile.length() - 8)
                 val infoLength = file.readInt()
                 val tag = file.readInt()
-                if (tag == TAG_ID_V1 || tag == TAG_ID_V2) {
+                if (tag == TAG_ID_V1 || tag == TAG_ID_V2 || tag == TAG_ID_V3) {
                     val maxLength = crafFile.length() - infoLength - LENGTH
                     file.seek(maxLength)
                     val c = file.readByte()
