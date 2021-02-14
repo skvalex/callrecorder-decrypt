@@ -6,15 +6,18 @@ You can download precompiled jar [here](https://github.com/skvalex/callrecorder-
 
 ## How to run
 Precompiled .jar:
-`java -jar craf_decrypt.jar -k [PATH_TO_KEY] password craf_file` 
+`java -jar callrecorder-decrypt.jar -k [PATH_TO_KEY] password craf_file` 
 
 From sources:
 `./gradlew run --args="-k [PATH_TO_KEY] password craf_file"`
 
 To build .jar:
-`./gradlew assemble`
+`./gradlew assemble` (callrecorder-decrypt.jar is going to be in build/libs)
 
 ## Changelog
+### version 1.0.1
+- supports files created by Call Recorder 3.3.7+
+
 ### version 1.0
  - init
  
