@@ -28,9 +28,9 @@ import javax.crypto.BadPaddingException
 
 fun main(args: Array<String>) = App().main(args)
 
-class App : CliktCommand(name = "craf_decrypt") {
+class App : CliktCommand(name = "callrecorder-decrypt") {
     init {
-        versionOption("1.0")
+        versionOption("1.0.1")
     }
 
     private val key: File by option("-k", "--key", help = "Path to the key file which were used to encrypt the .craf file (default: callrecorder.key)").file().default(File("callrecorder.key"))
